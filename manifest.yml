@@ -39,25 +39,12 @@ Scaling:
 Endpoints:
 - Private-IP-Name: IP
   Private-Port-Name: PORT
-  Private-Port: 8080
+  Private-Port: 18000
   Public-Port-Name: PROXY_PORT
   Protocols:
   - http
-  - ws
   Options:
     primary: true
-  Mappings:
-  - Frontend: ''
-    Backend: ''
-    Options:
-      websocket: true
-  - Frontend: "/health"
-    Backend: ''
-    Options:
-      health: true
-- Private-IP-Name:   INTERNAL_SERVICE_IP
-  Private-Port-Name: 5544
-  Public-Port-Name:  INTERNAL_SERVICE_PORT
 Version-Overrides:
   '2.7':
     Display-Name: Python 2.7
