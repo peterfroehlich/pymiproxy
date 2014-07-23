@@ -4,6 +4,7 @@ Cartridge-Short-Name: PYMIPROXY
 Display-Name: Pymiproxy
 Description: 'Pymiproxy'
 Version: '2.6'
+Source-Url: git@github.com:peterfroehlich/pymiproxy.git
 Versions:
 - '2.6'
 - '2.7'
@@ -26,7 +27,6 @@ Provides:
 - python-2.6
 - python
 Publishes:
-Source-Url: git@github.com:peterfroehlich/pymiproxy.git
 Subscribes:
   set-env:
     Type: ENV:*
