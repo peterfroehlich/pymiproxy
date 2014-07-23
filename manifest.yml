@@ -56,7 +56,7 @@ Endpoints:
     Options:
       health: true
 - Private-IP-Name:   INTERNAL_SERVICE_IP
-  Private-Port-Name: 18000
+  Private-Port-Name: 5544
   Public-Port-Name:  INTERNAL_SERVICE_PORT
 Version-Overrides:
   '2.7':
