@@ -1,0 +1,74 @@
+---
+Name: pymiproxy
+Cartridge-Short-Name: PYMIPROXY
+Display-Name: Pymiproxy
+Description: 'Pymiproxy'
+Version: '2.6'
+Versions:
+- '2.6'
+- '2.7'
+- '3.3'
+License: GPL
+License-Url: 
+Vendor: 
+Cartridge-Version: 0.0.1
+Compatible-Versions:
+Cartridge-Vendor: me
+Categories:
+- service
+- python
+- web_framework
+Website: http://www.python.org
+Help-Topics:
+  Developer Center: https://www.openshift.com/developers
+Provides:
+- python-2.6
+- python
+Publishes:
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+  set-doc-url:
+    Type: STRING:urlpath
+    Required: false
+Scaling:
+  Min: 1
+  Max: 3
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+    primary: true
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: true
+  - Frontend: "/health"
+    Backend: ''
+    Options:
+      health: true
+- Private-IP-Name:   INTERNAL_SERVICE_IP
+  Private-Port-Name: 18000
+  Public-Port-Name:  INTERNAL_SERVICE_PORT
+Version-Overrides:
+  '2.7':
+    Display-Name: Python 2.7
+    License: The Python License, version 2.7.3
+    Provides:
+    - python-2.7
+    - python
+    - python(version) = 2.7
+  '3.3':
+    Display-Name: Python 3.3
+    License: The Python License, version 3.3
+    Provides:
+    - python-3.3
+    - python
+    - python(version) = 3.3
