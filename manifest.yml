@@ -26,6 +26,7 @@ Provides:
 - python-2.6
 - python
 Publishes:
+Source-Url: git@github.com:peterfroehlich/pymiproxy.git
 Subscribes:
   set-env:
     Type: ENV:*
