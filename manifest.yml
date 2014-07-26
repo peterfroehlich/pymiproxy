@@ -4,7 +4,6 @@ Cartridge-Short-Name: PYMIPROXY
 Display-Name: Pymiproxy
 Description: 'Pymiproxy'
 Version: '2.6'
-Source-Url: https://github.com/peterfroehlich/pymiproxy.git
 Versions:
 - '2.6'
 - '2.7'
@@ -40,12 +39,23 @@ Scaling:
 Endpoints:
 - Private-IP-Name: IP
   Private-Port-Name: PORT
-  Private-Port: 18000
+  Private-Port: 8080
   Public-Port-Name: PROXY_PORT
   Protocols:
   - http
   Options:
     primary: true
+- Private-IP-Name: EXAMPLE_IP1
+  Private-Port-Name: EXAMPLE_PORT2
+  Private-Port: 8081
+  Public-Port-Name: EXAMPLE_PUBLIC_PORT2
+- Private-IP-Name: EXAMPLE_IP1
+  Private-Port-Name: EXAMPLE_PORT3
+  Private-Port: 8082
+  Public-Port-Name: EXAMPLE_PUBLIC_PORT3
+- Private-IP-Name: EXAMPLE_IP2
+  Private-Port-Name: EXAMPLE_PORT4
+  Private-Port: 9090
 Version-Overrides:
   '2.7':
     Display-Name: Python 2.7
