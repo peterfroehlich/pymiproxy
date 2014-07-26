@@ -41,10 +41,13 @@ Endpoints:
   Private-Port-Name: PORT
   Private-Port: 8080
   Public-Port-Name: PROXY_PORT
-  Protocols:
-  - http
-  Options:
-    primary: true
+  Mappings:
+    - Frontend:      ""
+      Backend:       ""
+      Options:       { websocket: true }
+    - Frontend:      "/health"
+      Backend:       ""
+      Options:       { health: true }
 - Private-IP-Name: EXAMPLE_IP1
   Private-Port-Name: EXAMPLE_PORT2
   Private-Port: 8081
